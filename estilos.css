@@ -46,6 +46,7 @@ header{
     flex: 1 1 200px;
 }
 .navbar-toggler{
+    width: 50px;
     border: none !important;
     outline: none;
 }
@@ -123,6 +124,7 @@ header{
 }
 .imagenquiensoy{
     max-width: 100%;
+    margin-bottom: 2rem;
 }
 #escuelatext{
     /* display: inline; */
@@ -151,6 +153,7 @@ color: transparent;
     object-fit: contain;
     
     
+    
 }
 .imagen1{
     text-align: center;
@@ -172,6 +175,7 @@ color: transparent;
 .servicio {
     /* background-color: #fff; */
     border-radius: 10px;
+    margin: 1.2rem 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     flex-grow: 1;  /* Los elementos crecen para llenar el espacio disponible */
