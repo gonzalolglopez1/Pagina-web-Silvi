@@ -214,6 +214,27 @@ button{
     color: antiquewhite;
 
 }
+.portadaastroimg{
+    margin-top: 2rem;
+    max-width: 100%;
+}
+.parrafoastro{
+    padding: 24px;
+    
+}
+.imgastroi{
+    max-width: 100%;
+    margin-bottom: 1.2rem;
+}
+.negrita{
+    font-weight: bold;
+    padding: 24px;
+    font-style: italic;
+}
+.conc{
+    color: rgb(162, 12, 142);
+    font-size: 1.3rem;
+}
 @media (max-width: 430px){
     header{
         height: 15vh;
