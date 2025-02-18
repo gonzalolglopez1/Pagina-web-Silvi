@@ -164,35 +164,53 @@ color: transparent;
 }
 
 .servicios {
-    display: flex;
+    /* display: flex;
     
     flex-wrap: wrap;
+    gap: 20px; */
+    display: flex;
+    justify-content: center;
     gap: 20px;
+    padding: 25px;
+    flex-wrap: wrap;
    
 }
 
 
 .servicio {
-    /* background-color: #fff; */
-    border-radius: 10px;
-    margin: 1.2rem 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    flex-grow: 1;  /* Los elementos crecen para llenar el espacio disponible */
-    flex-basis: calc(50% - 20px);
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
+    width: 21.875rem;
+    height: 40.625rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            padding: 24px;
+            width: 350px;
+            height: auto;
+            transition: transform 0.3s;
+            margin: 2rem 0;
 }
 
 .servicio:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    
+        transform: scale(1.05);
+    
 }
-
+.iconserv{
+    width: 7rem;
+    align-self: center;
+    margin-bottom: 4rem;
+    
+    
+}
 .servicio h2 {
     font-size: 24px;
     margin-bottom: 10px;
-    color: #333;
+    
 }
 
 .servicio p {
@@ -204,15 +222,20 @@ color: transparent;
     color: black;
 } */
 
-button{
+.btnservicio{
     
-    font-size: 1.1rem !important;
-    width: 12rem;
-    height: 4rem;
-    border: none;
-    background-color: rgb(132, 43, 43);
-    color: antiquewhite;
+    background: #b71c1c;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s ease;
 
+}
+.btnservicio:hover {
+    background: #e36d6d;
 }
 .portadaastroimg{
     margin-top: 2rem;
@@ -221,6 +244,16 @@ button{
 .parrafoastro{
     padding: 24px;
     
+}
+
+.contenedorastrologia{
+    margin-top: 3rem;
+}
+.itemastro{
+    transition: all ease 0.3s;
+}
+.itemastro:hover{
+    transform: scale(1.05);
 }
 .imgastroi{
     max-width: 100%;
@@ -234,6 +267,30 @@ button{
 .conc{
     color: rgb(162, 12, 142);
     font-size: 1.3rem;
+}
+
+.carousel-inner{
+    display: flex;
+    width: 40rem!important;
+    height: 40rem;
+    
+}
+.carousel-item{
+   
+   
+    height: 40rem !important;
+    
+    
+}
+.novedadescarru{
+    margin-top: 7rem;
+}
+
+.active{
+    height:auto!important;
+}
+.slide{
+    margin-top: 4rem;
 }
 @media (max-width: 430px){
     header{
@@ -254,6 +311,23 @@ button{
     }
 }
 
+@media (min-width: 767px){
+    .contenedorastrologia{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        justify-content: center;
+        
+    }
+    
+    .itemastro{
+        width: 20rem;
+        
+    }
+    .imgastroi{
+        height: 320px;
+    }
+}
 
 
 
