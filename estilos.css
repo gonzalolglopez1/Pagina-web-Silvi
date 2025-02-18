@@ -271,24 +271,16 @@ color: transparent;
 
 .carousel-inner{
     display: flex;
-    width: 40rem!important;
-    height: 40rem;
+    width: 30rem!important;
+    height: 30rem;
     
 }
-.carousel-item{
-   
-   
-    height: 40rem !important;
-    
-    
-}
+
 .novedadescarru{
     margin-top: 7rem;
 }
 
-.active{
-    height:auto!important;
-}
+
 .slide{
     margin-top: 4rem;
 }
