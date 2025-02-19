@@ -274,29 +274,16 @@ color: transparent;
 .novedadescarru{
     margin-top: 7rem;
 }
-/* .carousel-inner {
-    display: flex;
-    align-content: center;
-  }
 
 
-.slide{
-    margin-top: 4rem;
-}
-#carouselExampleIndicators{
-    padding: 24px;
-}
-.imgitemcarrusel{
-    width: 300px;
-    height: 300px;
-    
-    
-} */
+
+
 
 #carouselExampleIndicators {
     width: 90vw; /* 80% del viewport width */
     height: 50vh; /* 80% del viewport height */
-    margin: auto; /* Centrar el carrusel */
+    margin: 3rem auto; /* Centrar el carrusel */
+    
 }
 
 .carousel-inner {
@@ -352,7 +339,7 @@ color: transparent;
 #carouselExampleIndicators {
     width: 50vw; /* 80% del viewport width */
     height: 60vh; /* 80% del viewport height */
-    margin: auto; /* Centrar el carrusel */
+    margin:3rem auto; /* Centrar el carrusel */
 }
     /* .carousel-item{
     width: 50%!important;
