@@ -9,6 +9,37 @@ body{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.boton-subir {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #a457fd;
+    color: rgb(53, 53, 53);
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    display: none; /* Oculto al inicio */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    font-family:'Segoe UI', Tahoma, Verdana, sans-serif;
+    font-size: 2rem;
+    z-index: 4;
+}
+.flechaarriba{
+    width: 2.5rem;
+}
+.boton-subir:hover {
+    background-color: #bfdaf7;
+    transform: scale(1.1);
+  }
+
+.boton-subir.mostrar {
+    display: block;
+    opacity: 1;
+  }
 .navbar img{
    width: 50px;
    border-radius: 50%;
@@ -16,17 +47,30 @@ body{
 }
 header{
     width: 100%;
-    height: 30vh;
+    height:20vh;
     padding: 1.5rem;
-    
- 
+    position: sticky;
+    top: 0;
+    z-index: 22;
    
 }
+.container-fluid{
+     background-color: #90a6c4 ;
+}
+.navbar{
+    z-index: 1;
+}
+.nav-link:hover{
+    transition: 1s ease-in all;
+    color: #faf9fc;
+}
 .contenedorsil{
+    
     margin: 0 auto;
     width: 80%;
     padding: 24px;
     display: flex;
+    flex-direction: row;
     gap: 1rem;
     
 }
@@ -163,6 +207,9 @@ color: transparent;
     text-align: end;
 }
 
+.conpadding{
+    padding: 24px;
+}
 .servicios {
     /* display: flex;
     
@@ -217,10 +264,7 @@ color: transparent;
     font-size: 16px;
     color: #3c3c3c;
 }
-/* #servip{
-    font-size: 1.2rem;
-    color: black;
-} */
+
 
 .btnservicio{
     
@@ -237,17 +281,36 @@ color: transparent;
 .btnservicio:hover {
     background: #e36d6d;
 }
+.tituloempresalargo{
+
+    word-wrap: break-word;
+      overflow-wrap: break-word;
+}
 .portadaastroimg{
     margin-top: 2rem;
     max-width: 100%;
 }
 .parrafoastro{
     padding: 24px;
+   
+   
     
+}
+.paraffocontacto{
+    text-align: center;
+}
+.paraffocontacto .conmargin{
+    margin-top: 2rem;
+}
+.paraffocontacto .imgcontacto{
+   width: 2rem;
+  
+   
 }
 
 .contenedorastrologia{
     margin-top: 3rem;
+    overflow: hidden;
 }
 .itemastro{
     transition: all ease 0.3s;
@@ -300,13 +363,96 @@ color: transparent;
     height: 100%;
     object-fit: contain; /* Mantiene la proporción de la imagen y llena el contenedor */
 }
-@media (max-width: 430px){
+.itemviajes{
+    
+    margin: 7rem 0;
+}
+.itemviajecontenedorimg{
+    width: 21rem;
+    height: 21rem;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            
+}
+.itemviajecontenedorimg img{
+   width: 100%;
+   height: 100%;
+   border-radius: 15px;
+   
+}
+.contenerdorviajes{
+    padding: 24px;
+    
+
+}
+video{
+    width: 21rem;
+    height: 21rem;
+    background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            
+}
+.ultimoparrafomargen{
+    margin-bottom: 10rem;
+}
+
+footer{
+    height: 30rem;
+    
+}
+
+.redessociales{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin: 6rem auto;
+    align-items: center;
+    justify-content: start;
+    gap: 4rem;
+}
+.redsocial{
+   width: 300px;
+    display: flex;
+    justify-content: space-around;
+    gap: 3rem;
+    
+}
+.redsocial a{
+    display: inline-block;
+}
+.redsocial img{
+    align-self: flex-start;
+    margin-right: 8rem;
+    
+    width: 1.5rem;
+}
+.imgwhat{
+    width: 24px;
+    height: 24px;
+}
+.derechos{
+    font-size: 0.7rem;
+    padding: 24px;
+    margin-top: 4rem;
+}
+@media (max-width: 425px){
     header{
-        height: 15vh;
+       
+        height: 20vh;
+        
     }
     .contenedorsil{
-        flex-direction: column;
+        height: 50rem;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column!important;
     }
+   
     #h1principal{
         font-size: 2rem;
     }
@@ -317,9 +463,21 @@ color: transparent;
        color: aliceblue;
        background-color:rgb(132, 43, 43) ;
     }
+    .itemviajecontenedorimg{
+        width: 17rem;
+        height: 17rem;
+        margin: 0 auto;
+    }
+    video{
+        width: 17rem;
+        height: 17rem;
+    }
 }
 
 @media (min-width: 767px){
+    header{
+        position: unset;
+    }
     .contenedorastrologia{
         display: flex;
         flex-wrap: wrap;
@@ -341,15 +499,30 @@ color: transparent;
     height: 60vh; /* 80% del viewport height */
     margin:3rem auto; /* Centrar el carrusel */
 }
-    /* .carousel-item{
-    width: 50%!important;
-    height: 50%!important;
+
+.itemviajes{
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem 0;
     
-} 
-    .imgitemcarrusel{
-        width: 400px;
-        height: 400px;
-    } */
+}
+.itemviajecontenedorimg{
+    width: 24rem;
+    height: 24rem;
+    margin: 0;
+}
+   .vacio{
+    width: 24rem;
+    height: 24rem;
+    border-left: #3c3c3c 3px dashed;
+    border-right: rgb(132, 43, 43) 3px dashed;
+    
+   }
+   video{
+    width: 24rem;
+    height: 24rem;
+    
+   }
 }
 
 
