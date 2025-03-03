@@ -5,8 +5,9 @@
 }
 body{
     width: 100% ;
-    background-color:#90a6c4 !important ;
+    background-color:#baceeb !important ;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
 }
 
 .boton-subir {
@@ -48,25 +49,31 @@ body{
 header{
     width: 100%;
     height:20vh;
-    padding: 1.5rem;
-    position: sticky;
+    position: fixed;
     top: 0;
-    z-index: 22;
+    width: 100%;
+    z-index: 1020;
+   
+    
    
 }
 .container-fluid{
-     background-color: #90a6c4 ;
+     background-color: #90a6c4 ; 
+    
 }
 .navbar{
-    z-index: 1;
+    background-color: #90a6c4 !important;
+    padding: 0 !important;
+    overflow: visible;
+   
 }
-.nav-link:hover{
-    transition: 1s ease-in all;
-    color: #faf9fc;
+.nav-item:hover{
+    transition: 0.2s ease-in all;
+   background-color:  #faf9fc !important;
 }
 .contenedorsil{
     
-    margin: 0 auto;
+    margin: 5rem auto;
     width: 80%;
     padding: 24px;
     display: flex;
@@ -266,21 +273,6 @@ color: transparent;
 }
 
 
-.btnservicio{
-    
-    background: #b71c1c;
-            color: white;
-            padding: 12px 20px;
-            border-radius: 25px;
-            font-weight: bold;
-            border: none;
-            cursor: pointer;
-            transition: background 0.3s ease;
-
-}
-.btnservicio:hover {
-    background: #e36d6d;
-}
 .tituloempresalargo{
 
     word-wrap: break-word;
@@ -403,42 +395,36 @@ video{
 
 footer{
     height: 30rem;
+    position: relative;
     
 }
 
 .redessociales{
-    width: 50%;
+   width: 90%;
     display: flex;
-    flex-direction: column;
-    margin: 6rem auto;
+    flex-wrap: wrap;
+    margin: 14rem auto;
     align-items: center;
-    justify-content: start;
+    justify-content: center;
+    font-size: 0.8rem;
     gap: 4rem;
 }
-.redsocial{
-   width: 300px;
-    display: flex;
-    justify-content: space-around;
-    gap: 3rem;
-    
-}
-.redsocial a{
-    display: inline-block;
-}
+
 .redsocial img{
-    align-self: flex-start;
-    margin-right: 8rem;
+    
     
     width: 1.5rem;
 }
-.imgwhat{
-    width: 24px;
-    height: 24px;
-}
+
 .derechos{
     font-size: 0.7rem;
-    padding: 24px;
-    margin-top: 4rem;
+    padding: 0;
+    position: absolute;
+    bottom: 0;
+}
+.predestelefono{
+    display: inline-block;
+    margin-bottom: 0;
 }
 @media (max-width: 425px){
     header{
@@ -475,9 +461,7 @@ footer{
 }
 
 @media (min-width: 767px){
-    header{
-        position: unset;
-    }
+    
     .contenedorastrologia{
         display: flex;
         flex-wrap: wrap;

@@ -44,14 +44,14 @@ const video = document.getElementById("miVideo");
 const header = document.querySelector("header");
 const nav = document.querySelector(".navbar")
 
-window.addEventListener("scroll", () => {
-    if (window.scrollY > 0) {
-        header.style.padding = "0"; // Elimina el padding cuando se vuelve sticky
-        nav.style.padding = "0";
-    } else {
-        header.style.padding = "1.5rem"; // Restaura el padding cuando vuelve arriba
-    }
-});
+// window.addEventListener("scroll", () => {
+//     if (window.scrollY >= 0) {
+//         header.style.padding = "0"; // Elimina el padding cuando se vuelve sticky
+//         nav.style.padding = "0";
+//     } else {
+//         header.style.padding = "1.5rem"; // Restaura el padding cuando vuelve arriba
+//     }
+// });
 
 
 const btnSubir = document.getElementById("btSubir");
