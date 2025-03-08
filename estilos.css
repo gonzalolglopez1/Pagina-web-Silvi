@@ -299,7 +299,53 @@ color: transparent;
   
    
 }
-
+.team-grid {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 5rem auto;
+}
+.team-card {
+    background-color: rgb(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.team-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid white;
+    margin-bottom: 10px;
+}
+.tituloprofesores{
+  
+    /* margin: 0 3rem; */
+    text-align: center;
+    border-radius: 2rem;
+    color: rgb(132, 43, 43);
+    background-color: rgb(250, 249, 252, 0.4);
+}
+.teatroempresas{
+    padding: 24px;
+}
+.itemempresas{
+    margin-bottom: 5rem;
+}
+.imagenempresas{
+   display: flex;
+   
+}
+.imagenempresas img{
+    margin: 2rem auto;
+    max-width: 100%;
+    object-fit: cover;
+    width: 300px;
+    height: 300px;
+}
 .contenedorastrologia{
     margin-top: 3rem;
     overflow: hidden;
@@ -334,7 +380,7 @@ color: transparent;
 
 
 
-#carouselExampleIndicators {
+#carouselExampleIndicators, #carouselExampleAutoplaying {
     width: 90vw; /* 80% del viewport width */
     height: 50vh; /* 80% del viewport height */
     margin: 3rem auto; /* Centrar el carrusel */
@@ -348,6 +394,7 @@ color: transparent;
 
 .carousel-item {
     height: 100%;
+    transition: opacity 1s ease-in-out !important;
 }
 
 .imgitemcarrusel {
@@ -355,6 +402,7 @@ color: transparent;
     height: 100%;
     object-fit: contain; /* Mantiene la proporción de la imagen y llena el contenedor */
 }
+
 .itemviajes{
     
     margin: 7rem 0;
@@ -386,36 +434,48 @@ video{
     background: rgba(255, 255, 255, 0.15);
             backdrop-filter: blur(10px);
             border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 10px rgba(142, 53, 53, 0.3);
             
 }
 .ultimoparrafomargen{
     margin-bottom: 10rem;
 }
-
+.sinmargin{
+    margin: 0;
+}
 footer{
     height: 30rem;
     position: relative;
-    
-}
-
-.redessociales{
-   width: 90%;
     display: flex;
-    flex-wrap: wrap;
-    margin: 14rem auto;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
-    font-size: 0.8rem;
-    gap: 4rem;
-}
-
-.redsocial img{
+    align-items: center;
     
     
-    width: 1.5rem;
+}
+.wtpp{
+    width: 24px;
+}
+.negritaa{
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
+.redimg{
+    width: 24px;
+    
+}
+.titulored{
+    font-size: 1.1rem;
+    font-style: italic;
+    margin: 2rem auto;
+    text-align: center;
+}
+.red{
+    display: flex;
+    justify-content: space-evenly;
+    gap:2rem;
+}
 .derechos{
     font-size: 0.7rem;
     padding: 0;
@@ -426,7 +486,7 @@ footer{
     display: inline-block;
     margin-bottom: 0;
 }
-@media (max-width: 425px){
+@media (max-width: 431px){
     header{
        
         height: 20vh;
@@ -457,6 +517,9 @@ footer{
     video{
         width: 17rem;
         height: 17rem;
+    }
+    .tituloprofesores{
+        font-size: 1rem;
     }
 }
 
@@ -507,6 +570,18 @@ footer{
     height: 24rem;
     
    }
+   .teatroempresas{
+    display: flex;
+    flex-grow: 1;
+    gap: 1rem;
+    
+}
+.itemempresas{
+    flex: 1 1 100%;
+}
+.itemempresas img{
+    margin: 3rem;
+}
 }
 
 
