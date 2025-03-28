@@ -41,6 +41,12 @@ body{
     display: block;
     opacity: 1;
   }
+
+
+
+/*-------------------------NAV Y HEADER--------------------------------- */
+
+
 .navbar img{
    width: 50px;
    border-radius: 50%;
@@ -70,31 +76,6 @@ header{
 .nav-item:hover{
     transition: 0.2s ease-in all;
    background-color:  #faf9fc !important;
-}
-.contenedorsil{
-    
-    margin: 5rem auto;
-    width: 80%;
-    padding: 24px;
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    
-}
-.itempresentacion{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    
-}
-.itempresentacionimg img{
-   max-width: 100%;
-   filter: brightness(80%);
-  
-}
-.itempresentacionimg, .itempresentacion{
-    flex: 1 1 200px;
 }
 .navbar-toggler{
     width: 50px;
@@ -141,6 +122,36 @@ header{
     color: aliceblue;
        background-color:rgb(132, 43, 43) ;
 }
+
+/*-------------------------SECCION PRESENTACION SIL--------------------------------- */
+
+.contenedorsil{
+    
+    margin: 5rem auto;
+    width: 80%;
+    padding: 24px;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    
+}
+.itempresentacion{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+}
+.itempresentacionimg img{
+   max-width: 100%;
+   filter: brightness(80%);
+  
+}
+.itempresentacionimg, .itempresentacion{
+    flex: 1 1 200px;
+}
+
+/*-------------------------MAIN--------------------------------- */
 
 .grupoteatro{
    
@@ -213,7 +224,17 @@ color: transparent;
 .imagen2, .imagen4{
     text-align: end;
 }
-
+.textescuelateatro{
+    margin-top: 3rem;
+    width: 100%;
+    background-color: #bfdaf7;
+    text-align: center;
+    font-size: 1.2rem;
+}
+.colorteatro{
+    text-align: center;
+    color:  rgb(132, 43, 43);
+}
 .conpadding{
     padding: 24px;
 }
@@ -344,11 +365,15 @@ color: transparent;
     padding: 24px;
 }
 .itemempresas{
-    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
 }
 .imagenempresas{
    display: flex;
    
+}
+.parrafoempresas{
+    padding: 24px;
 }
 .imagenempresas img{
     margin: 2rem auto;
@@ -540,11 +565,7 @@ footer{
 }
 
 @media (min-width: 767px){
-    .itempresentacionimg img{
-        width: 70%;
-       
-        
-    }
+   
     .itempresentacionimg{
        margin-left: 10rem;
     }
@@ -599,13 +620,17 @@ footer{
     gap: 1rem;
     
 }
-.itemempresas{
+/* .itemempresas{
     flex: 1 1 100%;
-}
-.itemempresas img{
+} */
+/* .itemempresas img{
     margin: 3rem;
 }
+} */
+
+@media (min-width:1300px){
+    .itempresentacionimg img{
+        width: 80%;
+    }
 }
-
-
 
