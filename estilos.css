@@ -301,6 +301,8 @@ header {
   transition: all 0.3s ease-in;
 
   transform: scale(1.1) rotate(-3deg);
+  color: rgb(247, 148, 239);
+  background-color: #90a6c4;
 }
 .team-card img {
   width: 100px;
