@@ -475,7 +475,7 @@ footer {
     height: 20vh;
   }
   .contenedorsil {
-    height: 50rem;
+    /* height: 50rem; */
     display: flex;
     flex-wrap: wrap;
     flex-direction: column !important;
