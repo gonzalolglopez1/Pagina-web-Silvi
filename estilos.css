@@ -482,7 +482,17 @@ footer {
     align-items: center;
     overflow: hidden;
   }
+  .itempresentacion,
+  .itempresentacionimg {
+    flex: 0 0 100%;
+    max-width: 100%;
+    
+  }
 
+  .itempresentacionimg img {
+    width: 100%;
+    height: auto;
+  }
   #h1principal {
     font-size: 2rem;
   }
