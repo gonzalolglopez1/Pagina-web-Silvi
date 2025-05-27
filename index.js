@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 const video = document.getElementById("miVideo");
     let contadorRepeticiones = 0;
-    const maxRepeticiones = 5;
+    const maxRepeticiones = 10;
 
     video.addEventListener("ended", () => {
         contadorRepeticiones++;
@@ -70,3 +70,31 @@ const btnSubir = document.getElementById("btSubir");
       behavior: "smooth" // Desplazamiento suave
     });
   });
+
+
+
+  const track = document.querySelector(".carousel-pistas");
+  const items = document.querySelectorAll(".carousel-pista");
+  const prevBtn = document.querySelector(".carousel-boton.left");
+  const nextBtn = document.querySelector(".carousel-boton.right");
+  let currentIndex = 0;
+
+  function updateCarousel() {
+    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+  }
+
+  function showNext() {
+    currentIndex = (currentIndex + 1) % items.length;
+    updateCarousel();
+  }
+
+  function showPrev() {
+    currentIndex = (currentIndex - 1 + items.length) % items.length;
+    updateCarousel();
+  }
+
+  nextBtn.addEventListener("click", showNext);
+  prevBtn.addEventListener("click", showPrev);
+
+  // Auto-slide cada 5 segundos
+  setInterval(showNext, 5000);
