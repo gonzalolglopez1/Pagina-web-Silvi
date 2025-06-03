@@ -19,6 +19,36 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+
+   document.querySelectorAll(".carousel-contenedor").forEach(carousel => {
+    const track = carousel.querySelector(".carousel-pistas");
+    const items = carousel.querySelectorAll(".carousel-pista");
+    const prevBtn = carousel.querySelector(".carousel-boton.left");
+    const nextBtn = carousel.querySelector(".carousel-boton.right");
+    let currentIndex = 0;
+
+    function updateCarousel() {
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    function showNext() {
+      currentIndex = (currentIndex + 1) % items.length;
+      updateCarousel();
+    }
+
+    function showPrev() {
+      currentIndex = (currentIndex - 1 + items.length) % items.length;
+      updateCarousel();
+    }
+
+    if (nextBtn && prevBtn) {
+      nextBtn.addEventListener("click", showNext);
+      prevBtn.addEventListener("click", showPrev);
+    }
+
+    // Auto-slide cada 5 segundos
+    setInterval(showNext, 5000);
+  });
 });
 
 
@@ -72,29 +102,3 @@ const btnSubir = document.getElementById("btSubir");
   });
 
 
-
-  const track = document.querySelector(".carousel-pistas");
-  const items = document.querySelectorAll(".carousel-pista");
-  const prevBtn = document.querySelector(".carousel-boton.left");
-  const nextBtn = document.querySelector(".carousel-boton.right");
-  let currentIndex = 0;
-
-  function updateCarousel() {
-    track.style.transform = `translateX(-${currentIndex * 100}%)`;
-  }
-
-  function showNext() {
-    currentIndex = (currentIndex + 1) % items.length;
-    updateCarousel();
-  }
-
-  function showPrev() {
-    currentIndex = (currentIndex - 1 + items.length) % items.length;
-    updateCarousel();
-  }
-
-  nextBtn.addEventListener("click", showNext);
-  prevBtn.addEventListener("click", showPrev);
-
-  // Auto-slide cada 5 segundos
-  setInterval(showNext, 5000);
