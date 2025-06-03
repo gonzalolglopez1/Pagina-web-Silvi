@@ -21,34 +21,50 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
    document.querySelectorAll(".carousel-contenedor").forEach(carousel => {
-    const track = carousel.querySelector(".carousel-pistas");
-    const items = carousel.querySelectorAll(".carousel-pista");
-    const prevBtn = carousel.querySelector(".carousel-boton.left");
-    const nextBtn = carousel.querySelector(".carousel-boton.right");
-    let currentIndex = 0;
+  const track = carousel.querySelector(".carousel-pistas");
+  const items = carousel.querySelectorAll(".carousel-pista");
+  const prevBtn = carousel.querySelector(".carousel-boton.left");
+  const nextBtn = carousel.querySelector(".carousel-boton.right");
+  let currentIndex = 0;
 
-    function updateCarousel() {
-      track.style.transform = `translateX(-${currentIndex * 100}%)`;
-    }
+  function updateCarousel() {
+    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+  }
 
-    function showNext() {
-      currentIndex = (currentIndex + 1) % items.length;
-      updateCarousel();
-    }
+  function showNext() {
+    currentIndex = (currentIndex + 1) % items.length;
+    updateCarousel();
+  }
 
-    function showPrev() {
-      currentIndex = (currentIndex - 1 + items.length) % items.length;
-      updateCarousel();
-    }
+  function showPrev() {
+    currentIndex = (currentIndex - 1 + items.length) % items.length;
+    updateCarousel();
+  }
 
-    if (nextBtn && prevBtn) {
-      nextBtn.addEventListener("click", showNext);
-      prevBtn.addEventListener("click", showPrev);
-    }
+  if (nextBtn && prevBtn) {
+    nextBtn.addEventListener("click", showNext);
+    prevBtn.addEventListener("click", showPrev);
+  }
 
-    // Auto-slide cada 5 segundos
-    setInterval(showNext, 5000);
+  // Auto-slide control
+  let autoSlide = setInterval(showNext, 5000);
+
+  // Pausar en hover o touch sobre los videos
+  const videos = carousel.querySelectorAll("video");
+  videos.forEach(video => {
+    // Para escritorio
+    video.addEventListener("mouseenter", () => clearInterval(autoSlide));
+    video.addEventListener("mouseleave", () => {
+      autoSlide = setInterval(showNext, 5000);
+    });
+
+    // Para dispositivos móviles
+    video.addEventListener("touchstart", () => clearInterval(autoSlide), { passive: true });
+    video.addEventListener("touchend", () => {
+      autoSlide = setInterval(showNext, 5000);
+    }, { passive: true });
   });
+});
   const btnSubir = document.getElementById("btSubir");
 
   window.addEventListener("scroll", () => {

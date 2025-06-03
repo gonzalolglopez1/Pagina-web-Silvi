@@ -306,8 +306,7 @@ header {
       align-items: center;
     }
 
-    .itemviajecontenedorimg1 img,
-    .itemviajecontenedorimg1 video {
+    .itemviajecontenedorimg1 img {
       max-width: 100%;
       width: 600px;
       height: 600px;
