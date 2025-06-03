@@ -49,6 +49,22 @@ document.addEventListener("DOMContentLoaded", function () {
     // Auto-slide cada 5 segundos
     setInterval(showNext, 5000);
   });
+  const btnSubir = document.getElementById("btSubir");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      btnSubir.classList.add("mostrar");
+    } else {
+      btnSubir.classList.remove("mostrar");
+    }
+  });
+
+  btnSubir.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth" // Desplazamiento suave
+    });
+  });
 });
 
 
@@ -74,31 +90,6 @@ const video = document.getElementById("miVideo");
 const header = document.querySelector("header");
 const nav = document.querySelector(".navbar")
 
-// window.addEventListener("scroll", () => {
-//     if (window.scrollY >= 0) {
-//         header.style.padding = "0"; // Elimina el padding cuando se vuelve sticky
-//         nav.style.padding = "0";
-//     } else {
-//         header.style.padding = "1.5rem"; // Restaura el padding cuando vuelve arriba
-//     }
-// });
 
-
-const btnSubir = document.getElementById("btSubir");
-
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-      btnSubir.classList.add("mostrar");
-    } else {
-      btnSubir.classList.remove("mostrar");
-    }
-  });
-
-  btnSubir.addEventListener("click", () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth" // Desplazamiento suave
-    });
-  });
 
 
