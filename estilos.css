@@ -281,8 +281,8 @@ header {
   width: 2rem;
 }
     .carousel-contenedor {
-      width: 80vw;
-      height: 80vw;
+      width: 90vw;
+      height: 90vw;
       margin: 0 auto;
       overflow: hidden;
       position: relative;
@@ -328,11 +328,11 @@ header {
     }
 
     .carousel-boton.left {
-      left: 10px;
+      left: -12px;
     }
 
     .carousel-boton.right {
-      right: 10px;
+      right: -11px;
     }
 
 .team-grid {
