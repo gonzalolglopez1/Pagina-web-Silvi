@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-   document.querySelectorAll(".carousel-contenedor").forEach(carousel => {
+ document.querySelectorAll(".carousel-contenedor").forEach(carousel => {
   const track = carousel.querySelector(".carousel-pistas");
   const items = carousel.querySelectorAll(".carousel-pista");
   const prevBtn = carousel.querySelector(".carousel-boton.left");
@@ -65,6 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }, { passive: true });
   });
 });
+
   const btnSubir = document.getElementById("btSubir");
 
   window.addEventListener("scroll", () => {
