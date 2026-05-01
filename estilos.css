@@ -435,7 +435,7 @@ header {
 #carouselExampleIndicators,
 #carouselExampleAutoplaying {
   width: 90vw; /* 80% del viewport width */
-  height: 50vh; /* 80% del viewport height */
+  height: 70vh; /* 80% del viewport height */
   margin: 3rem auto; /* Centrar el carrusel */
 }
 
@@ -452,7 +452,8 @@ header {
 .imgitemcarrusel {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* Mantiene la proporción de la imagen y llena el contenedor */
+  object-fit: contain;
+  
 }
 
 .itemviajes {
